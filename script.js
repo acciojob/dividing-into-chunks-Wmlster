@@ -11,13 +11,13 @@ const divide = (arr, n) => {
 
 	while(i<arr.length)
 		{
-			if(sum+arr[i]<=n)
+			if(sum+arr[i]<=n&&arr[i]!=0)
 			{
 				sum+=arr[i];
 				v1.push(arr[i]);
 			}
 			else
-			{
+			{ 
 				sum=0;
 				v.push(v1);
 				v1=[];
@@ -35,5 +35,5 @@ const divide = (arr, n) => {
 	return v;
 };
 
-const n = prompt("Enter n: ");
+//const n = prompt("Enter n: ");
 alert(JSON.stringify(divide(arr, n)));
