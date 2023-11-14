@@ -21,15 +21,19 @@ const divide = (arr, n) => {
 				sum=0;
 				v.push(v1);
 				v1=[];
-
-				continue;
+				
+				sum+=arr[i];
+                v1.push(arr[i]);
+                
 			}
 
 			++i;
 		}
+		
+		v.push(v1);
 
 	return v;
 };
 
-//const n = prompt("Enter n: ");
+const n = prompt("Enter n: ");
 alert(JSON.stringify(divide(arr, n)));
